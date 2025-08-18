@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import SectionHeading from "./SectionHeading/SectionHeading";
 import ExtensionsSection from "./ExtensionsSection/ExtensionsSection";
-import extensions from "../public/data.json";
+import extensions from "../public/data";
 
 export default function App() {
    const [allExtensions, setAllExtensions] = useState(extensions);
