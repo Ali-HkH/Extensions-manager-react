@@ -32,13 +32,13 @@ function ThemeToggle() {
          {theme === "light" ? (
             <img
                className="aspect-square"
-               src="./assets/images/icon-moon.svg"
+               src={`${process.env.PUBLIC_URL}/assets/images/icon-moon.svg`}
                alt="moon-icon"
             />
          ) : (
             <img
                className="aspect-square"
-               src="./assets/images/icon-sun.svg"
+               src={`${process.env.PUBLIC_URL}/assets/images/icon-sun.svg`}
                alt="moon-icon"
             />
          )}
