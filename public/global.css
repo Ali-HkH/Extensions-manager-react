@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+   /* Neutral */
+   --color-neutral-900: hsl(227, 75%, 14%);
+   --color-neutral-800: hsl(226, 25%, 17%);
+   --color-neutral-700: hsl(225, 23%, 24%);
+   --color-neutral-600: hsl(226, 11%, 37%);
+   --color-neutral-300: hsl(0, 0%, 78%);
+   --color-neutral-200: hsl(217, 61%, 90%);
+   --color-neutral-100: hsl(0, 0%, 93%);
+   --color-neutral-0: hsl(200, 60%, 99%);
+
+   /* Red */
+   --color-red-400: hsl(3, 86%, 64%);
+   --color-red-500: hsl(3, 71%, 56%);
+   --color-red-700: hsl(3, 77%, 44%);
+}
+
+@layer base {
+   @font-face {
+      font-family: "Noto Sans";
+      src: url("./assets/fonts/static/NotoSans-Regular.ttf");
+      font-weight: 400;
+   }
+   @font-face {
+      font-family: "Noto Sans";
+      src: url("./assets/fonts/static/NotoSans-Medium.ttf");
+      font-weight: 500;
+   }
+   @font-face {
+      font-family: "Noto Sans";
+      src: url("./assets/fonts/static/NotoSans-Bold.ttf");
+      font-weight: 700;
+   }
+   body {
+      overflow-x: hidden;
+      font-family: "Noto Sans";
+   }
+   p {
+      @apply text-[16px];
+   }
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+   :root {
+      --container-padding: 2rem;
+   }
+}
+@media (min-width: var(--breakpoint-lg)) {
+   :root {
+      --container-padding: 4rem;
+   }
+}
+@media (min-width: var(--breakpoint-xl)) {
+   :root {
+      --container-padding: 5rem;
+   }
+}
+
+@utility container {
+   @apply mx-auto px-8 sm:px-8 lg:px-16 xl:px-24;
+}
+
+@layer utilities {
+   .bg-custom-gradient {
+      background: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+   }
+
+   @variant dark {
+      .bg-custom-gradient {
+         background: linear-gradient(180deg, #040918 0%, #091540 100%);
+      }
+   }
+}
