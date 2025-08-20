@@ -31,7 +31,7 @@ module.exports = (env, argv) => {
     plugins: [
       new HtmlWebpackPlugin({ template: "./public/index.html" }),
       new webpack.DefinePlugin({
-        "process.env.PUBLIC_URL": JSON.stringify(isProd ? repoName : "/"),
+        "process.env.PUBLIC_URL": JSON.stringify(isProd ? repoName : ""),
       }),
       new CopyPlugin({
         patterns: [{ from: "public/assets", to: "assets" }],
