@@ -3,6 +3,7 @@ import React from "react";
 function SwitchActive({ isActive, switchFn }) {
    return (
       <button
+         type="button"
          onClick={switchFn}
          className={`w-10 h-6 px-0.5 flex items-center relative rounded-xl border-1 border-neutral-50 dark:border-neutral-800 focus:outline-2 focus:outline-red-400 cursor-pointer transition-all duration-300 ${
             isActive
@@ -10,6 +11,12 @@ function SwitchActive({ isActive, switchFn }) {
                : "bg-neutral-300 dark:bg-neutral-500"
          }`}
       >
+         <span
+            className="sr-only"
+            aria-label={`${isActive ? "active" : "inactive"}`}
+         >
+            switch button for active or inactive state
+         </span>
          <span
             className={`absolute size-5 rounded-full bg-neutral-50 transition-all duration-300 ${
                isActive ? "translate-x-3.5" : "translate-x-0"

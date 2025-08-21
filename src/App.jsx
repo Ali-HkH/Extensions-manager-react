@@ -3,6 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import SectionHeading from "./SectionHeading/SectionHeading";
 import ExtensionsSection from "./ExtensionsSection/ExtensionsSection";
 import extensions from "../public/data";
+import Footer from "./Footer/Footer";
 
 export default function App() {
    const [allExtensions, setAllExtensions] = useState(extensions);
@@ -41,6 +42,7 @@ export default function App() {
                extensionsList={shownExtensions}
                setAllExtensions={setAllExtensions}
             />
+            <Footer />
          </div>
       </div>
    );
