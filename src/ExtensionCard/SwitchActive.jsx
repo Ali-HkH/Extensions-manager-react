@@ -10,12 +10,10 @@ function SwitchActive({ isActive, switchFn }) {
                ? "bg-red-500 hover:bg-red-400"
                : "bg-neutral-300 dark:bg-neutral-500"
          }`}
+         aria-label={`Switch to ${isActive ? "inactive" : "active"}`}
       >
-         <span
-            className="sr-only"
-            aria-label={`${isActive ? "active" : "inactive"}`}
-         >
-            switch button for active or inactive state
+         <span className="sr-only">
+            switch button - current : {isActive ? "active" : "inactive"}
          </span>
          <span
             className={`absolute size-5 rounded-full bg-neutral-50 transition-all duration-300 ${

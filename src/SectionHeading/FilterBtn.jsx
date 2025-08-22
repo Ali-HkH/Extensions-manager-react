@@ -3,6 +3,7 @@ import React from "react";
 function FilterBtn({ txt, isActive, filterfn }) {
    return (
       <button
+         type="button"
          onClick={filterfn}
          className={`px-5 py-1.5  text-lg rounded-3xl border-2 border-neutral-50 dark:border-neutral-900 focus:outline-2 focus:outline-red-400  cursor-pointer  ${
             isActive

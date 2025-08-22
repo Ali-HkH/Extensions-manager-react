@@ -29,10 +29,9 @@ function ThemeToggle() {
          type="button"
          onClick={changeTheme}
          className="flex items-center justify-center bg-neutral-100 hover:bg-neutral-300 dark:bg-neutral-700 dark:hover:bg-neutral-600 p-3 rounded-lg cursor-pointer border-2 border-neutral-50 dark:border-neutral-800 focus:outline-2 focus:outline-red-400"
+         aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
       >
-         <span className="sr-only" aria-label={`${theme === "light" ? "light" : "dark"}`}>
-            Theme toggle button
-         </span>
+         <span className="sr-only">Theme toggle - current mode: {theme}</span>
          {theme === "light" ? (
             <img
                className="aspect-square"
